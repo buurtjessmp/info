@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buurtjes SMP | Minecraft Survival Server</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Minecraft&family=Inter:wght@400;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #1a1a1a;
+            color: #ffffff;
+        }
+        
+        .minecraft-font {
+            font-family: 'Minecraft', sans-serif;
+        }
+        
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/0a764d2f-e78e-4475-8e54-170ec159077a.png') no-repeat center center;
+            background-size: cover;
+            min-height: 80vh;
+        }
+        
+        .block-btn {
+            position: relative;
+            transition: all 0.3s;
+            transform-style: preserve-3d;
+        }
+        
+        .block-btn:hover {
+            transform: translateY(-5px);
+        }
+        
+        .block-btn:active {
+            transform: translateY(0);
+        }
+        
+        .feature-card {
+            background-color: #2d2d2d;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .minecraft-border {
+            border: 4px solid #5e5e5e;
+            border-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"><rect x="0" y="0" width="12" height="12" fill="%235e5e5e" stroke="%235e5e5e" stroke-width="1"/></svg>') 4;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="bg-black bg-opacity-80 fixed w-full z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                       <img src="https://raw.githubusercontent.com/buurtjessmp/info/main/Buurtjes_smp_1.png" alt="Buurtjes SMP logo featuring red and orange colors" class="h-8 w-8">
+
+                    <div class="hidden md:block">
+                        <div class="ml-10 flex items-baseline space-x-4">
+                            <a href="#" class="px-3 py-2 rounded-md text-sm font-medium text-white bg-gray-900">Home</a>
+                            <a href="#about" class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white">Over Ons</a>
+                            <a href="#features" class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white">Features</a>
+                            <a href="#rules" class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white">Regels</a>
+                            <a href="#join" class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white">Join Ons</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero flex items-center justify-center text-center pt-16">
+        <div class="px-4 py-16 sm:px-6 lg:px-8">
+            <h1 class="minecraft-font text-5xl md:text-7xl font-bold text-orange-500 mb-4">Buurtjes SMP</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">Een gezellige survival Minecraft community waar creativiteit en samenwerking centraal staan</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#join" class="block-btn bg-orange-600 hover:bg-orange-700 text-white font-bold py-3 px-6 rounded shadow-lg transform transition">
+                    Speel Nu
+                </a>
+                <a href="#about" class="block-btn bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded shadow-lg transform transition">
+                    Lees Meer
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="minecraft-font text-4xl text-center text-orange-500 mb-12">Over Onze SMP</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="text-3xl font-bold mb-4">Onze Community</h3>
+                    <p class="text-lg mb-6">
+                        SkyCraft SMP is een Minecraft Survival Multiplayer server gestart door een groep vrienden die houden van creatief bouwen en gezellig samen spelen. 
+                        Onze server draait al sinds 2021 en heeft een actieve, vriendelijke community.
+                    </p>
+                    <p class="text-lg mb-6">
+                        Wij geloven in een leuk speelervaring voor iedereen, zonder pay-to-win elementen. Onze server is volledig shop-vrij en gefocust op survival gameplay.
+                    </p>
+                    <div class="bg-gray-800 p-6 rounded-lg minecraft-border">
+                        <h4 class="text-xl font-bold mb-3">Server Informatie</h4>
+                        <ul class="space-y-2">
+                            <li class="flex items-center">
+                                <span class="text-green-400 mr-2">⚡</span>
+                                <span>IP: play.skycraftsmp.nl</span>
+                            </li>
+                            <li class="flex items-center">
+                                <span class="text-green-400 mr-2">⚡</span>
+                                <span>Versie: Minecraft 1.20+</span>
+                            </li>
+                            <li class="flex items-center">
+                                <span class="text-green-400 mr-2">⚡</span>
+                                <span>Online sinds: Februari 2021</span>
+                            </li>
+                            <li class="flex items-center">
+                                <span class="text-green-400 mr-2">⚡</span>
+                                <span>Gamemode: Survival (geen land claims)</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="flex justify-center">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/5de0a1f0-e36f-46d1-a494-f4ee7244222a.png" alt="Screenshot van SkyCraft SMP spawn gebied met mooie gebouwen, een brug en natuur in Minecraft stijl" class="rounded-lg shadow-xl minecraft-border h-auto max-w-full">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="minecraft-font text-4xl text-center text-orange-500 mb-4">Server Features</h2>
+            <p class="text-center text-xl mb-12 max-w-3xl mx-auto">
+                Ontdek wat onze SMP speciaal maakt en waarom jij je bij ons moet aansluiten
+            </p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="feature-card p-6 text-center shadow-lg">
+                    <div class="flex justify-center mb-4">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/65000c90-7cf9-4948-b261-b7282289b235.png" alt="Icoon van een blok grond en een boom, symbool voor vanilla Minecraft survival" class="h-20 w-20">
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">Bijna-Vanilla</h3>
+                    <p class="text-gray-300">
+                        We spelen bijna-vanilla survival met minimale plugins die de gameplay verbeteren zonder te veranderen.
+                    </p>
+                </div>
+                
+                <!-- Feature 2 -->
+                <div class="feature-card p-6 text-center shadow-lg">
+                    <div class="flex justify-center mb-4">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/1ed9d557-cd64-453d-a3ee-4b1fe752c7fb.png" alt="Icoon van een crafttafel met gereedschap naast elkaar, symbool voor teamwork" class="h-20 w-20">
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">Community Projecten</h3>
+                    <p class="text-gray-300">
+                        Bouw mee aan gezamenlijke projecten zoals steden, wegen, winkels en boerderijen.
+                    </p>
+                </div>
+                
+                <!-- Feature 3 -->
+                <div class="feature-card p-6 text-center shadow-lg">
+                    <div class="flex justify-center mb-4">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/7dd48f0b-40e6-420f-bf91-1aab3af97bca.png" alt="Icoon van een diamanten zwaard en een schild, symbool voor PvP bescherming" class="h-20 w-20">
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">PVP-Bescherming</h3>
+                    <p class="text-gray-300">
+                        Goedgekeurde PVP alleen met wederzijdse toestemming, zodat je in vrede kunt bouwen.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
+                <!-- Feature 4 -->
+                <div class="feature-card p-6 text-center shadow-lg">
+                    <div class="flex justify-center mb-4">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/b75ab6f4-bc40-4387-b73b-ea91e3e56250.png" alt="Icoon van een enderpearl naast een nether portal" class="h-20 w-20">
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">Custom Nether</h3>
+                    <p class="text-gray-300">
+                        Onze Nether is aangepast voor een betere ervaring met unieke generatie en hogere build limiet.
+                    </p>
+                </div>
+                
+                <!-- Feature 5 -->
+                <div class="feature-card p-6 text-center shadow-lg">
+                    <div class="flex justify-center mb-4">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/138a58d7-17dc-42a1-9d2f-ce99541859d0.png" alt="Icoon van een notitieblok met muzieknoten" class="h-20 w-20">
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">Weekly Events</h3>
+                    <p class="text-gray-300">
+                        Elke week organiseren we leuke events en bouwwedstrijden met prijzen.
+                    </p>
+                </div>
+                
+                <!-- Feature 6 -->
+                <div class="feature-card p-6 text-center shadow-lg">
+                    <div class="flex justify-center mb-4">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/2c49944f-c29d-4146-a670-29f0d39429d6.png" alt="Icoon van een diamanten houweel met een versnellingswiel, symbool voor prestatiebeloning" class="h-20 w-20">
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">Achievements</h3>
+                    <p class="text-gray-300">
+                        Verdien speciale titels en kleuren door unieke uitdagingen te voltooien.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rules Section -->
+    <section id="rules" class="py-20 bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="minecraft-font text-4xl text-center text-green-400 mb-12">Server Regels</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <div class="bg-gray-800 p-6 rounded-lg minecraft-border mb-6">
+                        <h3 class="text-2xl font-bold mb-4 text-yellow-400">Algemene Regels</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <span class="text-red-500 mr-2">✖</span>
+                                <span>Geen griefing of stelen van anderen</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-red-500 mr-2">✖</span>
+                                <span>Geen hacking of gebruik van cheats</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-red-500 mr-2">✖</span>
+                                <span>Geen ongepaste taal of gedrag</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-red-500 mr-2">✖</span>
+                                <span>Geen ongevraagde PvP</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-gray-800 p-6 rounded-lg minecraft-border">
+                        <h3 class="text-2xl font-bold mb-4 text-yellow-400">Bouw Richtlijnen</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <span class="text-green-400 mr-2">✓</span>
+                                <span>Bouw minstens 200 blokken van de spawn om ruimte te geven aan anderen</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-green-400 mr-2">✓</span>
+                                <span>Gebruik borden om je builds te labelen</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-green-400 mr-2">✓</span>
+                                <span>Ruim temporary builds weer op</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div>
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/c2d42c81-602a-4cd0-b280-ce6e60dc9d6a.png" alt="Screenshot van een Minecraft community stad met verschillende bouwstijlen en goed georganiseerde gebouwen" class="rounded-lg shadow-xl minecraft-border w-full h-auto">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Staff Section -->
+    <section class="py-20 bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="minecraft-font text-4xl text-center text-green-400 mb-12">Ons Team</h2>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+                <!-- Staff 1 -->
+                <div class="feature-card p-6 text-center">
+                    <div class="flex justify-center mb-4">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/9102cd65-15b8-4427-b2ba-e44aa021833a.png" alt="Minecraft skin van server eigenaar BlockMasterNL met een diamanten harnas" class="h-24 w-24 rounded-full border-4 border-yellow-500">
+                    </div>
+                    <h3 class="text-2xl font-bold">BlockMasterNL</h3>
+                    <p class="text-yellow-400 mb-2">Eigenaar</p>
+                    <p class="text-gray-300">Oprichting van de server en hoofd development</p>
+                </div>
+                
+                <!-- Staff 2 -->
+                <div class="feature-card p-6 text-center">
+                    <div class="flex justify-center mb-4">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/1db040d1-02d3-4cbe-8c6c-6ca3cecd5580.png" alt="Minecraft skin van builder CreeperGirl met een creatief kostuum" class="h-24 w-24 rounded-full border-4 border-blue-500">
+                    </div>
+                    <h3 class="text-2xl font-bold">CreeperGirl</h3>
+                    <p class="text-blue-400 mb-2">Hoofd Builder</p>
+                    <p class="text-gray-300">Ontwerp van spawn en community projecten</p>
+                </div>
+                
+                <!-- Staff 3 -->
+                <div class="feature-card p-6 text-center">
+                    <div class="flex justify-center mb-4">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/c6daa023-2aea-44aa-a3e3-a3282c6a539e.png" alt="Minecraft skin van moderator RedstoneTom met een rode cape" class="h-24 w-24 rounded-full border-4 border-red-500">
+                    </div>
+                    <h3 class="text-2xl font-bold">RedstoneTom</h3>
+                    <p class="text-red-400 mb-2">Moderator</p>
+                    <p class="text-gray-300">Helpt met regels en community vragen</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Join Section -->
+    <section id="join" class="py-20 bg-green-900 bg-opacity-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h2 class="minecraft-font text-4xl text-green-300 mb-4">Sluit Je Bij Ons Aan</h2>
+                <p class="text-xl mb-8 max-w-3xl mx-auto">
+                    Klaar om deel uit te maken van onze SMP? Verbind met onze server vandaag nog!
+                </p>
+                
+                <div class="bg-gray-900 bg-opacity-80 p-8 rounded-lg max-w-2xl mx-auto minecraft-border">
+                    <h3 class="text-2xl font-bold mb-6">Hoe te Joinen:</h3>
+                    
+                    <div class="mb-6">
+                        <h4 class="text-xl font-semibold mb-3 text-green-300">1. Verbind met de server</h4>
+                        <div class="bg-gray-800 p-4 rounded">
+                            <code class="text-green-400 text-lg">play.skycraftsmp.nl</code>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <h4 class="text-xl font-semibold mb-3 text-green-300">2. Word lid van onze Discord</h4>
+                        <p class="mb-3">Voor updates, events en community chat:</p>
+                        <div class="bg-gray-800 p-4 rounded">
+                            <code class="text-red-500 text-lg">discord.gg/buurtjes</code>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h4 class="text-xl font-semibold mb-3 text-green-300">3. Lees de regels</h4>
+                        <p>Zorg ervoor dat je onze serverregels begrijpt en volgt voor de beste ervaring voor iedereen.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black bg-opacity-90 py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center mb-4 md:mb-0">
+                    <img src="https://github.com/buurtjessmp/info/blob/main/Buurtjes_smp_1.png" alt="Small version of Buurtjes SMP logo" class="h-8 w-8 mr-2">
+                    <span class="minecraft-font text-xl text-orange-500">Buurtjes SMP</span>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/256da76b-b331-4cd5-a73d-daf56970a1ea.png" alt="Discord icoon" class="h-6 w-6">
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/25f246a4-5aa8-417d-b18d-88274f35ef4e.png" alt="Twitter/X icoon" class="h-6 w-6">
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/2b1428d1-c224-4400-92d4-6432d58179bb.png" alt="YouTube icoon" class="h-6 w-6">
+                    </a>
+                </div>
+            </div>
+            <div class="mt-8 border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between">
+                <p class="text-gray-400">© 2023 SkyCraft SMP. Alle rechten voorbehouden.</p>
+                <div class="mt-4 md:mt-0">
+                    <a href="#" class="text-gray-400 hover:text-white mr-4">Privacybeleid</a>
+                    <a href="#" class="text-gray-400 hover:text-white mr-4">Voorwaarden</a>
+                    <a href="#contact" class="text-gray-400 hover:text-white">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Current year for copyright
+        document.addEventListener('DOMContentLoaded', function() {
+            const yearSpan = document.querySelector('#current-year');
+            if (yearSpan) {
+                yearSpan.textContent = new Date().getFullYear();
+            }
+        });
+    </script>
+</body>
+</html>
+
