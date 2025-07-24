@@ -1,53 +1,223 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Buurtjes SMP</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css" rel="stylesheet">
   <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/buurtjessmp/info/main/Buurtjes_smp_1.png" />
+
+  <!-- Interne CSS -->
+  <style>
+    /* Algemene layout */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #111827;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* Header */
+    header {
+      background-color: #1f2937;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header img {
+      height: 64px;
+      width: 64px;
+    }
+
+    header .logo-text {
+      font-size: 1.8rem;
+      font-weight: bold;
+      margin-left: 15px;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+    }
+
+    nav a:hover {
+      color: #facc15;
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 80px 20px;
+      background: linear-gradient(to bottom, #111827, #1f2937);
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      color: #facc15;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      color: #d1d5db;
+      max-width: 700px;
+      margin: 0 auto 30px;
+    }
+
+    .hero button {
+      background-color: #facc15;
+      color: #111827;
+      padding: 12px 24px;
+      border: none;
+      font-weight: bold;
+      font-size: 1rem;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    .hero button:hover {
+      background-color: #fde047;
+    }
+
+    /* Info Section */
+    .info {
+      padding: 60px 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      justify-content: center;
+      background-color: #111827;
+    }
+
+    .info img {
+      max-width: 300px;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+    }
+
+    .info-text {
+      max-width: 500px;
+    }
+
+    .info h2 {
+      font-size: 2rem;
+      color: #fcd34d;
+      margin-bottom: 15px;
+    }
+
+    .info p {
+      color: #d1d5db;
+      line-height: 1.6;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #1f2937;
+      color: #9ca3af;
+      padding: 30px 20px;
+      margin-top: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+    }
+
+    footer img {
+      height: 56px;
+      width: 56px;
+    }
+
+    footer span {
+      font-weight: bold;
+      color: white;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        margin-top: 10px;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .info {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
 </head>
-<body class="bg-gray-900 text-white font-sans">
+
+<body>
 
   <!-- Navbar -->
-  <nav class="bg-gray-800 px-6 py-4 shadow-lg">
-    <div class="container mx-auto flex justify-between items-center">
-      <a href="/" class="flex items-center gap-3 hover:opacity-80 transition">
-        <img src="https://raw.githubusercontent.com/buurtjessmp/info/main/Buurtjes_smp_1.png" alt="Buurtjes SMP Logo" class="h-12 w-12">
-        <span class="text-xl font-bold">Buurtjes SMP</span>
-      </a>
-      <ul class="hidden md:flex gap-6 text-sm font-medium">
-        <li><a href="#" class="hover:text-yellow-400 transition">Home</a></li>
-        <li><a href="#" class="hover:text-yellow-400 transition">About</a></li>
-        <li><a href="#" class="hover:text-yellow-400 transition">Join</a></li>
-        <li><a href="#" class="hover:text-yellow-400 transition">Contact</a></li>
-      </ul>
+  <header>
+    <div style="display: flex; align-items: center;">
+      <img src="https://raw.githubusercontent.com/buurtjessmp/info/main/Buurtjes_smp_1.png" alt="Logo Buurtjes SMP" />
+      <span class="logo-text">Buurtjes SMP</span>
     </div>
-  </nav>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Over</a>
+      <a href="#">Word Lid</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
 
-  <!-- Main Content -->
-  <main class="container mx-auto px-6 py-12 text-center">
-    <h1 class="text-4xl md:text-6xl font-extrabold mb-6">Welkom bij Buurtjes SMP</h1>
-    <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto">
-      Een gezellige Minecraft Survival server waar je samen met vrienden bouwt, overleeft en avonturen beleeft!
+  <!-- Hero -->
+  <section class="hero">
+    <h1>Welkom bij Buurtjes SMP</h1>
+    <p>
+      Een gezellige Minecraft Survival server waar je samen bouwt, overleeft en plezier maakt.
+      Sluit je vandaag nog aan!
     </p>
-    <a href="#" class="bg-yellow-500 text-gray-900 font-bold py-3 px-6 rounded-xl shadow-md hover:bg-yellow-400 transition">
-      Word Lid
-    </a>
-  </main>
+    <button onclick="alert('Join-aanvraag verzonden!')">Word Lid</button>
+  </section>
+
+  <!-- Info -->
+  <section class="info">
+    <img src="https://raw.githubusercontent.com/buurtjessmp/info/main/Buurtjes_smp_1.png" alt="Illustratie Buurtjes SMP" />
+    <div class="info-text">
+      <h2>Wat is Buurtjes SMP?</h2>
+      <p>
+        Buurtjes SMP is een Minecraft Survival server voor iedereen die houdt van bouwen,
+        samenwerken en avontuur. Wij zijn een hechte community met een gezellige sfeer,
+        gezamenlijke projecten en leuke events. Iedereen is welkom!
+      </p>
+    </div>
+  </section>
 
   <!-- Footer -->
-  <footer class="bg-gray-800 py-6 mt-16">
-    <div class="container mx-auto flex flex-col md:flex-row justify-between items-center px-6 gap-4">
-      <div class="flex items-center gap-3">
-        <img src="https://raw.githubusercontent.com/buurtjessmp/info/main/Buurtjes_smp_1.png" alt="Logo" class="h-10 w-10">
-        <span class="text-white font-semibold">Buurtjes SMP © 2025</span>
-      </div>
-      <div class="text-sm text-gray-400">
-        Made with ❤️ by de community
-      </div>
-    </div>
+  <footer>
+    <img src="https://raw.githubusercontent.com/buurtjessmp/info/main/Buurtjes_smp_1.png" alt="Footer Logo" />
+    <span>© 2025 Buurtjes SMP</span>
+    <div>Gemaakt met ❤️ door de community</div>
   </footer>
+
+  <!-- JavaScript -->
+  <script>
+    // Je kunt hier extra interactie toevoegen
+    console.log("Welkom bij Buurtjes SMP!");
+  </script>
 
 </body>
 </html>
